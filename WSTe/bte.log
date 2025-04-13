@@ -1,0 +1,127 @@
+btp2 -vv interpolate -m 30 .
+btp2 -vv integrate interpolation.bt2 300:1201:50
+
+[kanwal@DESKTOP-RBPHS30 R3]$ btp2 -vv interpolate -m 30 .
+INFO    │ looking for a BT2 calculation
+INFO    │ error in BT2 loader: this loader only works with dictionaries
+INFO    │ looking for a GPAW calculation
+INFO    │ error in GPAW loader: Cannot find GPAW system in this directory
+INFO    │ looking for a Quantum ESPRESSO calculation
+INFO    │ error in Quantum ESPRESSO loader: ESPRESSO XML output file not found
+INFO    │ looking for a AIMS calculation
+INFO    │ AIMS system name: /mnt/d/Thermoelectric/WSTe/Calculations/scf/R1/R3
+INFO    │ error in AIMS loader: geometry.in file not found
+INFO    │ looking for a ABINIT calculation
+INFO    │ error in ABINIT loader: no valid abinit run files found
+INFO    │ looking for a CASTEP calculation
+INFO    │ error in CASTEP loader: cannot determine a CASTEP system name
+INFO    │ looking for a GENE calculation
+INFO    │ error in GENE loader: cannot determine a GENE system name
+INFO    │ looking for a Wien2k calculation
+INFO    │ error in Wien2k loader: cannot determine a Wien2k system name
+INFO    │ looking for a VASP calculation
+INFO    │ lattice:
+INFO    │ [[ 3.36615912 -1.68307956  0.        ]
+INFO    │  [ 0.          2.9151793   0.        ]
+INFO    │  [ 0.          0.         25.        ]]
+INFO    │ successfully loaded a VASP calculation
+INFO    │ Fermi energy: -0.05430120423114302
+INFO    │ Number of independent second-order linear response tensors: 2
+INFO    │ Basis tensor #1:
+INFO    │ [[0.99999999 0.         0.        ]
+INFO    │  [0.         1.         0.        ]
+INFO    │  [0.         0.         0.        ]]
+INFO    │ Basis tensor #2:
+INFO    │ [[-0.  0.  0.]
+INFO    │  [ 0.  0.  0.]
+INFO    │  [ 0.  0.  1.]]
+INFO    │ Nvalence (before BANDANA) = 26.0
+INFO    │ BANDANA output
+INFO    │ 0 -2.7871935640493106 -2.7868958945372793 False
+INFO    │ 1 -1.4753199253401297 -1.4719941116563224 False
+INFO    │ 2 -1.473030442550061 -1.4687748710076869 False
+INFO    │ 3 -1.4713473235807975 -1.4687748710076869 False
+INFO    │ 4 -0.5805474217673388 -0.5183381686850314 False
+INFO    │ 5 -0.530527918949328 -0.44880845056610086 False
+INFO    │ 6 -0.2978348839824907 -0.24455571626112418 True
+INFO    │ 7 -0.25923707058909073 -0.16986639326698338 True
+INFO    │ 8 -0.22612960597315812 -0.16597464001709186 True
+INFO    │ 9 -0.19808619799400598 -0.156103772000842 True
+INFO    │ 10 -0.18984699989555767 -0.09738202962122304 True
+INFO    │ 11 -0.1431496358291068 -0.09737467975672845 True
+INFO    │ 12 -0.09970091186926983 -0.06178296094162051 True
+INFO    │ 13 -0.016353448500488414 0.034180544832144444 True
+INFO    │ 14 0.01354580026355063 0.03717561461369457 True
+INFO    │ 15 0.030659959739230306 0.07024265497490687 True
+INFO    │ 16 0.06383357313561433 0.10891029208100554 True
+INFO    │ 17 0.0737228158131007 0.15507111603935048 True
+INFO    │ 18 0.11532304885254539 0.19716378999993348 True
+INFO    │ 19 0.12348507337380038 0.2500460650385915 True
+INFO    │ 20 0.13778055981580037 0.2568079403736249 True
+INFO    │ 21 0.15122346197642658 0.275686067328009 False
+INFO    │ 22 0.1780431175172276 0.29820605213946805 False
+INFO    │ 23 0.21226041167184503 0.31209362110201766 False
+INFO    │ 24 0.23401233564361829 0.3257312946717508 False
+INFO    │ 25 0.25163363576942543 0.32943562637703 False
+INFO    │ 26 0.27149664456608613 0.3331950820660187 False
+INFO    │ 27 0.28879455065413084 0.33789532041031634 False
+INFO    │ 28 0.29437677273778073 0.3462888656631513 False
+INFO    │ 29 0.31518791405424496 0.3547853090189107 False
+INFO    │ 30 0.3327026411448804 0.3667949876030896 False
+INFO    │ 31 0.3403758996772444 0.37951025317875026 False
+INFO    │ Nvalence (after BANDANA chops off low and high lying bands) = 14.0
+INFO    │ there are 121 irreducible k points in the input
+INFO    │ 3630 irreducible k points have been requested
+INFO    │ 12 unique rotations
+INFO    │ 43560 total k points in the sphere
+INFO    │ 3766 irreducible k points have been generated
+INFO    │ the interpolation took 0.529 s
+INFO    │ about to save the results to /mnt/d/Thermoelectric/WSTe/Calculations/scf/R1/R3/interpolation.bt2
+INFO    │ saving the results took 0.774 s
+
+[kanwal@DESKTOP-RBPHS30 R3]$ btp2 -vv integrate interpolation.bt2 300:1201:50
+INFO    │ looking for a BT2 calculation
+INFO    │ successfully loaded a BT2 calculation
+INFO    │ Fermi energy: -0.05430120423114302
+INFO    │ sucessfully loaded interpolation.bt2
+INFO    │ rebuilding the bands took 2.91 s
+INFO    │ computing the DOS took 0.914 s
+INFO    │ smoothing the DOS took 0.00517 s
+INFO    │ Temperatures: [ 300.  350.  400.  450.  500.  550.  600.  650.  700.  750.  800.  850.
+INFO    │   900.  950. 1000. 1050. 1100. 1150. 1200.]
+INFO    │ Fermi level from DFT: -0.05430120423114302
+INFO    │ Refined Fermi level: -0.03899891788803198
+INFO    │ Intrinsic chemical potential for each T: [-0.03899892 -0.03899892 -0.03899892 -0.03899892 -0.03899892 -0.03899892
+INFO    │  -0.03899892 -0.03899892 -0.03899892 -0.03899892 -0.03899892 -0.03899892
+INFO    │  -0.03899892 -0.03899892 -0.03899892 -0.03899892 -0.03899892 -0.03899892
+INFO    │  -0.03899892]
+INFO    │ Chemical potentials: [-0.26397537 -0.26350074 -0.2630261  ...  0.22110044  0.22157507
+INFO    │   0.22204971]
+INFO    │ computing the FD moments took 5.53 s
+INFO    │ trace output file: interpolation.trace
+INFO    │ conductivity/seebeck output file: interpolation.condtens
+INFO    │ Hall coefficient output file: interpolation.halltens
+INFO    │ JSON output file: interpolation.btj
+
+btp2 plot interpolation.btj DOS
+cp figure1.png DOS.png
+btp2 plot -c '["xx","yy"]' interpolation.btj kappae
+cp figure1.png kappae.png
+btp2 plot -c '["xx","yy"]' interpolation.btj sigma
+cp figure1.png sigma.png
+btp2 plot -c '["xx","yy"]' interpolation.btj S
+cp figure1.png S.png
+btp2 plot -c '["xx","yy"]' interpolation.btj PF
+cp figure1.png PF.png
+
+python3 thermoelectric.py -i interpolation.trace
+
+# RAW
+Ef = -1.4776 eV
+# REFINED
+Ef = -1.0612 eV
+# p-type doping, intrinsic, n-type doping
+µ - Ef = -0.013, 0.0, 0.013
+-0.5,0.0,0.5
+
+T = 300,350,400,450,500,550,600,650,700,750,800,850,900,950,1000,1050,1100,1150,1200
